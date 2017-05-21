@@ -1,5 +1,5 @@
 App
-.controller("TrackController",function($scope,Track_service,$location,$rootScope,Form,Paginator){
+.controller("TrackController",function($scope,Track_service,$location,$rootScope,Form,Paginator,growl){
       var list = Track_service.query({type:'tracks'},function() {
       $scope  = Paginator.init(list.results,$scope);
    });
@@ -17,6 +17,7 @@ App
        return parseInt(elem,10);
      })
      var list = Track_service.save({id:formData.data.id},formData.data,function() {
+       growl.success('Track : '+ formData.data.title +' is updated', {ttl: 3000,disableCountDown: true});
        $location.url("/tracks");
     });
    };
@@ -60,7 +61,7 @@ App
      }) : "";
      track.genres = genre.join(",");
      Form.setFormValues({
-       title:"Edit new track",
+       title:"Edit track : " + track.title,
        fieldsList:['title','rating','genres'],
        submitMethod:$scope.updateTrack,
        data:track
@@ -73,7 +74,7 @@ App
        return parseInt(elem,10);
      })
      var list = Track_service.save(formData.data,function() {
-       console.log(list);
+       growl.success('New track : '+ formData.data.title + ' is added', {ttl: 3000,disableCountDown: true});
        $location.url("/tracks");
     });
    };

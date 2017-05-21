@@ -3,11 +3,12 @@
     <title> Angular app </title>
     <link rel="stylesheet" type="text/css" href="/assets/styles/index.css">
     <link rel="stylesheet" type="text/css" href="/assets/styles/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/styles/angular-growl.min.css">
     <script src="lib/angular.js"></script>
     <script src="lib/angular-route.js"></script>
     <script src="lib/angular-resource.js"></script>
     <script src="lib/bootstrap.min.js"></script>
-
+    <script src="lib/angular-growl.min.js"></script>
     <script src="modules/app.js"></script>
     <script src="controllers/trackController.js"></script>
     <script src="controllers/genreController.js"></script>
@@ -20,6 +21,7 @@
   <body>
     <div class="container">
       <div ng-view ></div>
+       <div growl></div>
     </div>
   </body>
 </html>
