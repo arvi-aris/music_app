@@ -5,6 +5,10 @@ body{
   #ffd180 20px );
 }
 
+#loading-bar .bar {
+  position: relative;
+}
+
 .bg{
   background-color: rgb(255, 238, 208);
   height:100%;
