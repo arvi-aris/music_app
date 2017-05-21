@@ -1,0 +1,19 @@
+<div class="bg container">
+  <div class="center-box">
+    <h2 class="app-header">  Track's genres </h2>
+    <div class="track-area">
+        <div class="tracks-list">
+          <div ng-repeat="genre in list" class="indi_track">
+            <span class="genre-name" title="{{genre.name}}" ng-click="editGenre(genre)">
+              {{genre.name}}
+          </span>
+        </div>
+        <button type="button"  class="btn addTrack btn-secondary" ng-click="addGenre()">  Add new genre </button>
+        <div class="btn-group" id="pageBtns">
+          <button type="button" class="btn btn-secondary" value="before" ng-click="paginate($event)">Prev</button>
+          <button type="button" class="btn btn-secondary" value="next" ng-click="paginate($event)">Next</button>
+        </div>
+    </div>
+  </div>
+  <button type="button" class="btn btn-secondary" ng-click="navigatetoTracks($event)">Tracks &#x261B;</button>
+</div>

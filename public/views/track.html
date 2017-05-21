@@ -1,0 +1,25 @@
+<div class="bg container">
+  <div class="center-box">
+    <h2 class="app-header">  Music Tracks </h2>
+    <div class="track-area">
+        <input type="search" id="search-track" ng-blur="search($event)" ng-keydown="searchTitle($event)"  placeholder="Search title"/>
+        <div class="tracks-list">
+          <div ng-repeat="track in list" class="indi_track">
+            <span class="title" title="{{track.title}}" ng-click="editTrack(track)">
+              {{track.title}}
+          </span>
+          <span>
+          <span ng-repeat="i in range(track.rating)">
+            &#9733;
+          </span>
+        </span>
+        </div>
+        <button type="button" class="btn addTrack btn-secondary" ng-click="addTrack()">  Add new track </button>
+        <div class="btn-group" id="pageBtns">
+          <button type="button" class="btn btn-secondary" value="before" ng-click="initPagination($event)">Prev</button>
+          <button type="button" class="btn btn-secondary" value="next" ng-click="initPagination($event)">Next</button>
+        </div>
+    </div>
+  </div>
+  <button type="button" class="btn btn-secondary" ng-click="navigatetoGenre($event)">Genre &#x261B;</button>
+</div>

@@ -1,0 +1,25 @@
+<html ng-app="music_app">
+  <head>
+    <title> Angular app </title>
+    <link rel="stylesheet" type="text/css" href="/assets/styles/index.css">
+    <link rel="stylesheet" type="text/css" href="/assets/styles/bootstrap.min.css">
+    <script src="lib/angular.js"></script>
+    <script src="lib/angular-route.js"></script>
+    <script src="lib/angular-resource.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+
+    <script src="modules/app.js"></script>
+    <script src="controllers/trackController.js"></script>
+    <script src="controllers/genreController.js"></script>
+    <script src="controllers/addController.js"></script>
+    <script src="modules/router.js"></script>
+    <script src="services/appServices.js"></script>
+    <script src="services/form_renderer.js"></script>
+    <script src="services/paginator.js"></script>
+  </head>
+  <body>
+    <div>
+      <div ng-view ></div>
+    </div>
+  </body>
+</html>

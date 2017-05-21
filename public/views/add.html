@@ -1,0 +1,11 @@
+<div class="bg">
+  <div class="center-box">
+    <h2 class="app-header">  {{form.title}} </h2>
+    <div class="track-area">
+      <form class="form-horizontal" ng-submit="submit(form.data)">
+          <div ng-repeat="field in form.fieldsList"><label class="addtracklabel" class="form-group control-label" for=""> {{field}} </label> <input type="text" ng-model="form.data[field]" required class="addtrackinput form-control" id="field" ></div>
+          <input type="submit" class="btn addTrack btn-secondary"  value="Save"/>
+      </form>
+    </div>
+  </div>
+</div>
