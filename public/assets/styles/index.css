@@ -1,5 +1,12 @@
+body{
+      background: repeating-linear-gradient( 45deg,#f6ba52,
+  #f6ba52 10px,
+  #ffd180 10px,
+  #ffd180 20px );
+}
+
 .bg{
-  background-color: #fff;
+  background-color: rgb(255, 238, 208);
   height:100%;
   width:100%;
 }
@@ -19,13 +26,25 @@
   width:25%;
 }
 
-.addTrack{
+.btn.addTrack{
   border-radius: 5px !important;
   border: 1px solid black !important;
   margin: 25px;
   width: 25%;
-  background-color: lightgrey !important;
+  background-color: #f6ba52 !important;
   cursor: pointer;
+}
+
+.btn.addTrack:hover{
+  background-color: #ffeed0 !important;
+}
+
+.btn{
+  background-color: #ffeed0 !important;
+}
+
+.btn:hover{
+  background-color: #f6ba52 !important;
 }
 
 textarea:focus, input:focus{
@@ -40,6 +59,10 @@ textarea:focus, input:focus{
 
 .tracks-list,.track-area{
   margin: 25px;
+}
+
+.genre-name{
+  cursor: pointer
 }
 
 .title{
