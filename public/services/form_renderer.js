@@ -1,14 +1,18 @@
+/*
+ * Service to share formData/$scope across moduleControllers and AddController
+ */
 App.
-factory('Form', function () {
+factory('Form', function() {
 
-    var Form = {
-    };
+    var Form = {};
 
     return {
-        setFormValues: function (obj) {
+        //setter
+        setFormValues: function(obj) {
             Form = obj;
         },
-        getFormValues: function () {
+        //getter
+        getFormValues: function() {
             return Form;
         }
     };
